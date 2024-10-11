@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Interactive Resume Builder</h1>
+
+        <!-- Input Form -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name"><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email"><br>
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number"><br>
+
+        <label for="education">Education:</label>
+        <input type="text" id="education" placeholder="Enter your education"><br>
+
+        <label for="experience">Experience:</label>
+        <input type="text" id="experience" placeholder="Enter your experience"><br>
+
+        <button id="generateResume">Generate Resume</button>
+    </div>
+
+    <!-- Resume Display Section -->
+    <div class="resume-container hidden" id="resumeContainer">
+        <h1>Your Resume</h1>
+        
+        <!-- Toggle Button -->
+        <button id="toggleButton">Show/Hide Experience</button>
+
+        <section class="section">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> <span id="displayName"></span></p>
+            <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+            <p><strong>Phone:</strong> <span id="displayPhone"></span></p>
+        </section>
+
+        <section class="section" id="displayExperienceSection">
+            <h2>Experience</h2>
+            <p id="displayExperience"></p>
+        </section>
+
+        <section class="section">
+            <h2>Education</h2>
+            <p id="displayEducation"></p>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
